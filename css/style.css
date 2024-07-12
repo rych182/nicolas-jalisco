@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+.container {
+    /*Divides la pantalla para que tus 2 contenedores estén uno al lado del otro
+    usando display:flex*/
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    background-image: url('../img/madera.jpeg');
+    color: white;
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+     /*te aseguras de que el ancho definido para la barra lateral incluya todo el padding y
+    el border, manteniendo el diseño consistente y
+    evitando que la barra lateral sea más ancha de lo esperado
+    */
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    background-color: #ccc;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+}
+
+.info p {
+    margin: 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+nav ul li.active, nav ul li:hover {
+    background-color: #FFA500;
+}
+
+/*          CONTENIDO PRINCIPAL         */
+
+.main-content {
+    background-image: url('../img/pizarron.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #A0E1EB;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.score {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 20%;
+    box-sizing: border-box;
+}
+
+.score h3 {
+    margin-top: 0;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    background-color: #4caf50;
+    height: 100%;
+}
+
+.final-score {
+    background-color: #A0E1EB;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.canica{
+    background-image: url('../img/canica.jpeg');
+}
