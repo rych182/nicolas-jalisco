@@ -6,6 +6,144 @@ body {
     height: 100vh;
 }
 
+/*          COLORES GENERALES           */
+.negro{
+    color: black;
+}
+
+.azul-claro{
+    background-color: aqua !important;
+}
+
+.rojo-test-1{
+    background-color: red !important;
+}
+
+.blanco{
+    color: white;
+}
+
+/*      LOGIN        */
+
+.caja-principal{
+    border: orange solid 2px;
+    margin-left: 30%;
+    width: 75%;
+}
+
+.seccion-1{
+    border: red 2px solid;
+    width: 100%;
+}
+
+.header-titulo{
+    background-color: gray;
+    height: 10%;
+    width: 35%;
+    margin-left: 33%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 50px;
+}
+
+.header-titulo h1{
+    text-align: center;
+    color: white;
+}
+
+.formulario{
+    background-image: url('../img/madera.jpeg');
+    border: 2px yellow solid;
+    border-radius: 50px;
+    height: 22%;
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 80px
+}
+
+.subformulario-1{
+    border: black solid 2px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.subformulario-2{
+    border: black solid 2px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.formulario label{
+    color: white;
+    font-weight: 800;
+}
+
+.formulario input{
+    border-radius: 30px;
+    background-color: rgb(54, 54, 235);
+}
+
+.footer-login{
+    border: 2px solid rgb(255, 47, 203);
+    height: 20%;
+    margin-top: 100px;
+}
+
+.boton-login{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.boton-login button{
+    font-size: 20px;
+    background-color: blue;
+    border: none;
+    padding: 20px 35px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.caja-boton-login{
+    background-color: blue;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.boton-crear-usuario{
+    border: solid 1px red;
+    display: flex;
+    justify-content: center;
+}
+
+.caja-crear-usuario{
+    color: red;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.caja-crear-usuario button{
+    background-color: red;
+    border: red;
+    padding: 10px;
+    border-radius: 50px;
+    color: white;
+    font-weight: 800;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    font-weight: 800;
+    text-align: center;
+    display: none;
+}
+
+/*      INDEX        */
+
 .container {
     /*Divides la pantalla para que tus 2 contenedores estén uno al lado del otro
     usando display:flex*/
@@ -26,10 +164,19 @@ body {
 }
 
 .profile {
+    border: 1px green solid;
     display: flex;
+    width: 100%;
+    /*
     flex-direction: column;
     align-items: center;
+
     margin-bottom: 20px;
+    */
+    }
+
+.marco-avatar{
+    border: 1px solid blue;
 }
 
 .avatar {
@@ -40,9 +187,25 @@ body {
     margin-bottom: 10px;
 }
 
-.info p {
-    margin: 0;
+.nombre-avatar p {
     text-align: center;
+    font-weight: 800;
+}
+/*
+.home{
+    background-image: url('../img/home.png');
+    height: 50px;
+    width: 50px;
+    color: black;
+}
+*/
+.info{
+    width: 100%;
+    text-align: center;
+}
+
+.info p{
+    font-weight: 800;
 }
 
 nav ul {
@@ -53,10 +216,29 @@ nav ul {
 nav ul li {
     padding: 10px 0;
     cursor: pointer;
+    border: 5px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    font-weight: 800;
 }
+
+.alineado{
+    display: flex;
+    justify-content: center;
+
+}
+.espacio-icono{
+    margin-right: 5px;
+}
+
 
 nav ul li.active, nav ul li:hover {
     background-color: #FFA500;
+}
+nav ul >a{
+    text-decoration: none;
 }
 
 /*          CONTENIDO PRINCIPAL         */
@@ -70,52 +252,234 @@ nav ul li.active, nav ul li:hover {
     box-sizing: border-box;
 }
 
-.header {
-    background-color: #A0E1EB;
-    padding: 10px;
-    text-align: center;
-    margin-bottom: 20px;
+.padre-header{
+    display: flex;
+    justify-content: center;
 }
 
-.scoreboard {
+.header {
     display: flex;
-    justify-content: space-around;
+    text-align: center;
+    position: relative;
+    width: 80%;
+    background-color: grey;
     margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+.header-caja1{
+    border: 1px green solid;
+    width: 20%;
+    position: absolute;
+    left: -100px;
+    top: -5px;
+}
+
+.canica{
+    border-radius: 80px;
+}
+
+.header-caja2{
+    border: 1px purple solid;
+    width: 100%;
+}
+
+.canica{
+    position: absolute;
+    border: 1px black solid;
+}
+
+/*      */
+
+
+
+/*
+h2{
+    text-align: center;
+    border: 1px solid red;
+    width: 100%;
+}
+*/
+
+.scoreboard {
+    border: #FFA500 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 10px;
+    height: 540px;
 }
 
 .score {
     background-color: #fff;
+    width: 35%;
+    height: 115px;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 20%;
     box-sizing: border-box;
+    border: purple 1px solid;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .score h3 {
     margin-top: 0;
 }
 
+.padre-header-test1{
+    display: flex;
+    justify-content:flex-start
+}
+
+.header-test1 {
+    display: flex;
+    text-align: center;
+    position: relative;
+    width: 30%;
+    background-color: grey;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+.score-test1 a{
+    text-decoration: none;
+}
+
+.scoreboard-test1 {
+    border: #FFA500 1px solid;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 540px;
+}
+
+.score-test1 {
+    background-color: #fff;
+    width: 22%;
+    height: 115px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    border: purple 1px solid;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.test1-titulo{
+    font-size: 40px;
+    border:black 2px solid;
+    padding: 30px 60px;
+}
+
+.test1-titulo {
+    text-decoration: none;
+    color: black;
+}
+
+/* TEST 1  */
+
+.padre-scoreboard-test-1{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #4caf50 solid 1px;
+}
+
+.scoreboard-test-1 {
+    border: #FFA500 1px solid;
+    height: 340px;
+    width: 40%;
+    background-color: rgb(34, 14, 90);
+    border-radius: 50px;
+}
+
+.scoreboard-test-1 div h2{
+    margin-left: 20px;
+    color: white;
+}
+
+.hijo-scoreboard-test-1{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: yellow 1px solid;
+}
+
+.nieto-scoreboard-test-1{
+    width: 80%;
+    background-color: grey;
+    border-radius: 20px;
+    height: 180px;
+}
+
+.nieto-scoreboard-test-1 h3,label,input{
+    margin-left: 20px;
+}
+
+.nieto-scoreboard-test-1 label{
+    font-weight: 700;
+}
+
+
+
+/*      FOOTER SIDE CONTENT     */
+.final-score {
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 98%;
+    border: red 1px solid;
+    display: flex;
+    justify-content: center;
+}
+.caja-principal-final-scrore{
+    margin: 5px 5px;
+    background-color: #FFA500;
+    width: 70%;
+    border-radius: 50px;
+}
+
+.caja-canica-barra{
+    display: flex;
+    justify-content: flex-end;
+    border:green 1px solid;
+    height: 100%;
+    position: relative;
+}
+
+.caja-footer-canica{
+    border: blue 1px solid;
+    width: 20%;
+    position: absolute;
+    left: 0;
+}
+
+.caja-footer-canica img{
+    border-radius: 50px;
+}
+
+.padre-progress-bar{
+    border: 1px solid purple;
+    width: 80%;
+}
+
 .progress-bar {
     background-color: #e0e0e0;
+    width: 80%;
     border-radius: 5px;
-    height: 20px;
+    height: 15px;
     overflow: hidden;
     margin-bottom: 10px;
+    
+    margin-left: 50px;
 }
 
 .progress {
     background-color: #4caf50;
     height: 100%;
-}
-
-.final-score {
-    background-color: #A0E1EB;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.canica{
-    background-image: url('../img/canica.jpeg');
 }
