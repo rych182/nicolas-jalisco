@@ -26,3 +26,4 @@ document.getElementById('miFormulario').addEventListener('submit', function(even
         event.preventDefault();
     }
 });
+
