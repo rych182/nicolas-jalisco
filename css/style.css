@@ -637,7 +637,7 @@ section.grupos-main-principal .cajas-grupos h2{
     color: white;
 }
 
-/*   ALUMNO X    */
+/*   GRUPOS 1,2,3,4,5,6   */
 
 .main-content-alumno-x{
     background-image: url('../img/pizarron.jpeg');
@@ -646,4 +646,8 @@ section.grupos-main-principal .cajas-grupos h2{
     width: 80%;
     padding: 20px;
     box-sizing: border-box;
+}
+
+.alumno-contenedor {
+    margin-bottom: 20px; /*espacio entre cada div que aparece en los grupos*/
 }

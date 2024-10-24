@@ -1,5 +1,7 @@
 
 /*      MI CODIGO
+// Recorre cada elemento y añade el evento click
+
 let cajasModal = document.querySelectorAll('.caja-modal');
 
 agregarAlumnos.forEach( agregarAlumno => {
@@ -9,6 +11,7 @@ agregarAlumnos.forEach( agregarAlumno => {
 });
 */
 
+/*  ================== CODIGO DE LA VENTANA MODAL ======================  */ 
 // Selecciona todos los botones con la clase 'boton-verde'
 let agregarAlumnos = document.querySelectorAll('.boton-verde');
 
@@ -41,6 +44,60 @@ cerrarModal.forEach(cerrar =>{
     })
 })
 
+
+/*     ============ AGREGAR ALUMNO AL ARCHIVO grupo-1.html ============   */
+
+// Seleccionar todos los botones de la modal
+let botonesGrupo = document.querySelectorAll('.caja-modal button');
+
+// Iterar sobre cada botón y agregar un event listener
+botonesGrupo.forEach(boton => {
+    boton.addEventListener('click', (event) => {
+        // Verificar si es el botón de Grupo 1
+        if (event.target.textContent === "Grupo 1") {
+            // Encuentra el div con la clase caja-contenedor-alumnos
+            let cajaAlumno = boton.closest('.cajas-alumnos-botones').querySelector('.cajas-alumnos');
+            
+             // Encuentra el botón verde y lo oculta
+             let botonVerde = cajaAlumno.querySelector('.boton-verde');
+             if (botonVerde) {
+                 botonVerde.style.display = 'none'; // Ocultar el botón verde
+             }
+
+            // Guarda los elementos en localStorage (asegurando que se acumulen)
+            let alumnosGuardados = localStorage.getItem('alumnos') || '[]';
+            let alumnosArray = JSON.parse(alumnosGuardados);
+            alumnosArray.push(cajaAlumno.outerHTML);
+            localStorage.setItem('alumnos', JSON.stringify(alumnosArray));
+
+            // Redirigir a otro archivo donde se mostrará el contenido
+            window.location.href = 'grupo-1.html';
+        }
+    });
+});
+
+
+// Recuperar los alumnos guardados del localStorage
+let alumnosGuardados = localStorage.getItem('alumnos');
+
+/* ============ ESPACIO ENTRE CADA DIV QUE APARECE EN GRUPOS-X.HTML ============== */
+//Modifica el JavaScript para agregar la clase .alumno-contenedor a cada div que se inserte.
+
+// Insertar el contenido en el div de alumno-container
+if (alumnosGuardados) {
+    let contenedor = document.getElementById('alumno-container');
+    let alumnosArray = JSON.parse(alumnosGuardados);
+    alumnosArray.forEach(alumno => {
+        let div = document.createElement('div');
+        div.classList.add('alumno-contenedor'); // Añadir la clase con margen
+        div.innerHTML = alumno;
+        contenedor.appendChild(div); // Añadir el nuevo div al contenedor
+    });
+}
+
+
+
+
 /*
 Consideraciones:
 
@@ -48,14 +105,4 @@ Consideraciones:
     este código asegurará que solo se muestre el que está dentro del mismo
     contenedor .cajas-alumnos.
 
-*/
-
-
-// Recorre cada elemento y añade el evento click
-/*
-cajasModal.forEach(caja => {
-    caja.addEventListener('click', () => {
-        alert("Estoy dando click a la caja modal");
-    });
-});
 */
